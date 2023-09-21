@@ -547,7 +547,7 @@ const validateDatadogHostname = (ddHost) => {
   // Verify the host.
   if (
     !ddHost ||
-    !ddHost.match(/^[a-z0-9.-]+\.(datadoghq\.(com|eu|us)|ddog-gov\.com)$/)
+    !ddHost.match(/^(https:\/\/)?[a-z0-9.-]+\.(datadoghq\.(com|eu|us)|ddog-gov\.com)$/)
   ) {
     throw new Error(
       `Invalid DataDog host: ${ddHost}. See here for more details: https://docs.datadoghq.com/getting_started/site/`,
